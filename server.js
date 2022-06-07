@@ -5,6 +5,8 @@ const PORT = 8000
 
 app.use(cors())
 
+app.use(express.static('public'))
+
 const aliens = {
     'humans':{
         'speciesName' : 'Humans',
@@ -66,6 +68,18 @@ const aliens = {
 
 app.get('/', (req, res) =>{
     res.sendFile(__dirname + '/index.html')
+})
+
+app.get('/public/lcars-classic.min.css', (req, res) =>{
+    res.sendFile(__dirname + '/public/lcars-classic.min.css')
+})
+
+app.get('/public/main.js', (req, res) =>{
+    res.sendFile(__dirname + '/public/main.js')
+})
+
+app.get('/public/lcars.js', (req, res) =>{
+    res.sendFile(__dirname + '/public/lcars.js')
 })
 
 app.get('/api/:alienName', (req, res) =>{
