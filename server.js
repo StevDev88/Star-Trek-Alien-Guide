@@ -8,7 +8,7 @@ app.use(cors())
 app.use(express.static('public'))
 
 const aliens = {
-    'humans':{
+    'humans': {
         'speciesName' : 'Humans',
         'homeworld': 'Earth',
         'features':'Rounded ears, hair on head and face (sometimes)',
